@@ -1,6 +1,7 @@
 const path=require("path")
 const htmlWebpackPlugin=require("html-webpack-plugin")
 
+
 module.exports={
     mode:"development",
     entry:{bundle:path.resolve(__dirname,"./src/index.js")},
@@ -32,7 +33,8 @@ module.exports={
             title:"animation components",
             filename:"index.html",
             template:"./src/template.html"
-        })
+        }),
+    
     ],
     devServer:{
         static:{
@@ -42,6 +44,7 @@ module.exports={
         open:true,
         hot:true,
         compress:true,
-        historyApiFallback:true
+        historyApiFallback:true,
+        liveReload:true
     }
 }
